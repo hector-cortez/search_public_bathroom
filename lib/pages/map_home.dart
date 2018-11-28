@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong/latlong.dart';
+
 import 'package:search_public_bathroom/utils/search_public_bathroom.dart';
 
 class MapHome extends StatefulWidget {
@@ -17,7 +20,6 @@ class _MapHomeState extends State<MapHome> {
       applicationName: "Search Public Bathroom",
       applicationIcon: new Icon(Icons.person_pin_circle),
       icon: new Icon(Icons.info),
-      
     );
     ListTile _getItem(Icon icon, String description, String route) {
       return new ListTile(
@@ -44,15 +46,64 @@ class _MapHomeState extends State<MapHome> {
     );
   }
 
+  Padding _getBody(BuildContext context) {
+    return new Padding(
+      padding: new EdgeInsets.all(8.0),
+      child: new Column(
+        children: [
+
+          new Flexible(
+            child: new FlutterMap(
+              options: new MapOptions(
+                // center: new LatLng(51.5, -0.09),
+                center: new LatLng(-16.51, -68.13),
+                zoom: 15.0,
+              ),
+              layers: [
+                new TileLayerOptions(
+                  urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  subdomains: ['a', 'b', 'c']),
+                new MarkerLayerOptions(
+                  markers: [new Marker(
+                    width: 45.0,
+                    height: 45.0,
+                    point: new LatLng(-16.50, -68.13),
+                    builder: (context) => new Container(
+                      child: IconButton(
+                        icon: Icon(Icons.location_on),
+                        color: Colors.blue[900],
+                        iconSize: 45.0,
+                        onPressed: () {
+                          print('Test position');
+                        },
+                      ),
+                    )
+                  )]
+                )
+              ],
+            ),
+          ),
+
+          new Padding(
+            padding: new EdgeInsets.only(top: 8.0, bottom: 8.0),
+            child: new Text("- This is a map that is showing  (51.5, -0.9)."),
+          ),
+
+        ],
+      ),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-         title: Text(SearchPublicBathroom.name),
-         backgroundColor: Colors.blue[800],
-       ),
-       drawer: _getDrawer(context),
+      appBar: AppBar(
+        title: Text(SearchPublicBathroom.name),
+        backgroundColor: Colors.blue[800],
+      ),
+      drawer: _getDrawer(context),
+      body: _getBody(context),
     );
   }
 }
-
