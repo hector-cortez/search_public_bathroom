@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "106382908757",
+    "firebase_url": "https://flutterdb-0000.firebaseio.com",
+    "project_id": "flutterdb-0000",
+    "storage_bucket": "flutterdb-0000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106382908757:android:2c494a0d12cb2198",
+        "android_client_info": {
+          "package_name": "com.cortez.sampledb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106382908757-ti5lq86rejj2j8osldcn480cmagehbb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQEtGFgC8Ckb7qdxnY5ATZdXWywpUIxNc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106382908757:android:5c67fef3821763af",
+        "android_client_info": {
+          "package_name": "com.example.searchpublicbathroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106382908757-ti5lq86rejj2j8osldcn480cmagehbb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQEtGFgC8Ckb7qdxnY5ATZdXWywpUIxNc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

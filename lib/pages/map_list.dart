@@ -16,16 +16,19 @@ class _MapListState extends State<MapList> {
        body: ListView(
           children: <Widget>[
             ListTile(
-              leading: Icon(Icons.map),
+              leading: Icon(Icons.location_on, color: Colors.blue[800],),
               title: Text('Map'),
+              subtitle: Text('data'),
             ),
             ListTile(
-              leading: Icon(Icons.photo_album),
+              leading: Icon(Icons.location_on, color: Colors.blue[800],),
               title: Text('Album'),
+              subtitle: Text('data'),
             ),
             ListTile(
-              leading: Icon(Icons.phone),
+              leading: Icon(Icons.location_on, color: Colors.blue[800],),
               title: Text('Phone'),
+              subtitle: Text('data'),
             ),
           ],
         ),

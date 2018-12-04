@@ -86,7 +86,51 @@ class _MapHomeState extends State<MapHome> {
 
           new Padding(
             padding: new EdgeInsets.only(top: 8.0, bottom: 8.0),
-            child: new Text("- This is a map that is showing  (51.5, -0.9)."),
+            // child: new Text("- This is a map that is showing  (51.5, -0.9)."),
+            
+            child: new Column(
+              children: <Widget>[
+                new Row(
+                  children: <Widget>[
+                    new Text(
+                      "Descripcion de la direccion",
+                      textAlign: TextAlign.left,
+                      textDirection: TextDirection.ltr,
+                      style: new TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+
+                new Row(
+                  children: <Widget>[
+                    new Icon(
+                      Icons.location_on,
+                      color: Colors.blueAccent,
+                    ),
+                    new Text(
+                      "123 Metros",
+                      style: new TextStyle(color: Colors.blueAccent),
+                    ),
+                    new IconButton(
+                        icon: Icon(Icons.edit_location),
+                        tooltip: 'Editar Posición',
+                        onPressed: () { setState(() {  }); },
+                    )
+                  ],
+                ),
+                new Row(
+                  children: <Widget>[
+                    new Text('Calificación(1..5):'),
+                    new Text(
+                      'Gratis',
+                      style: new TextStyle(color: Colors.orange),
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
 
         ],
